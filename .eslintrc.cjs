@@ -8,6 +8,7 @@
 module.exports = {
   root: true,
   parserOptions: {
+    project: './tsconfig.json',
     ecmaVersion: 'latest',
     sourceType: 'module',
     ecmaFeatures: {
@@ -19,13 +20,20 @@ module.exports = {
     commonjs: true,
     es6: true,
   },
-  ignorePatterns: ['!**/.server', '!**/.client'],
+  ignorePatterns: [
+    'postcss.config.js',
+    '**/dist/*',
+    '**/node_modules/*',
+    '**/entry.server.tsx',
+    '**/entry.client.tsx',
+  ],
 
   // Base config
   extends: [
-    'plugin:prettier/recommended',
-    'eslint:recommended',
+    'airbnb',
+    'airbnb-typescript',
     'plugin:storybook/recommended',
+    'plugin:prettier/recommended',
   ],
 
   overrides: [
@@ -53,10 +61,8 @@ module.exports = {
         },
       },
       rules: {
-        'react/prop-types': 'off',
-        'react/jsx-boolean-value': ['error', 'never'],
-        'react/jsx-no-useless-fragment': 'error',
-        'react/jsx-pascal-case': 'error',
+        'react/require-default-props': 'off',
+        'react/jsx-filename-extension': [1, { extensions: ['.tsx', '.jsx'] }],
       },
     },
 
@@ -82,12 +88,16 @@ module.exports = {
         'plugin:import/typescript',
       ],
       rules: {
-        '@typescript-eslint/no-unused-vars': [
+        'import/extensions': [
           'error',
-          { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
+          'ignorePackages',
+          {
+            js: 'never',
+            jsx: 'never',
+            ts: 'never',
+            tsx: 'never',
+          },
         ],
-        '@typescript-eslint/no-explicit-any': 'warn',
-        '@typescript-eslint/consistent-type-imports': 'error',
       },
     },
 
