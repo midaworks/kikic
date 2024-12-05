@@ -52,6 +52,12 @@ module.exports = {
           typescript: {},
         },
       },
+      rules: {
+        'react/prop-types': 'off',
+        'react/jsx-boolean-value': ['error', 'never'],
+        'react/jsx-no-useless-fragment': 'error',
+        'react/jsx-pascal-case': 'error',
+      },
     },
 
     // Typescript
@@ -75,6 +81,14 @@ module.exports = {
         'plugin:import/recommended',
         'plugin:import/typescript',
       ],
+      rules: {
+        '@typescript-eslint/no-unused-vars': [
+          'error',
+          { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
+        ],
+        '@typescript-eslint/no-explicit-any': 'warn',
+        '@typescript-eslint/consistent-type-imports': 'error',
+      },
     },
 
     // Node
