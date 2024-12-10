@@ -7,6 +7,13 @@ import {
 } from '@remix-run/react';
 import type { LinksFunction } from '@remix-run/node';
 
+/**
+ * Noto Sans KR
+ * 400
+ * 디자인 시스템에 따라 weight 추가 import 필요
+ */
+import '@fontsource/noto-sans-kr';
+
 import './tailwind.css';
 
 export const links: LinksFunction = () => [
