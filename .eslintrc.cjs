@@ -37,6 +37,13 @@ module.exports = {
   ],
 
   overrides: [
+    // JavaScript 파일용 설정
+    {
+      files: ['*.js', '*.cjs', '*.mjs'],
+      parserOptions: {
+        project: null, // JavaScript 파일에 대해 TypeScript 파싱 비활성화
+      },
+    },
     // React
     {
       files: ['**/*.{js,jsx,ts,tsx}'],
