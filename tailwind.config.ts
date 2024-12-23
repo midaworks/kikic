@@ -76,7 +76,7 @@ export default {
           '13px',
           {
             lineHeight: '20px',
-            fontWeight: '900', // Extra Bold
+            fontWeight: '700', // Bold
             letterSpacing: '0',
           },
         ],
@@ -100,7 +100,7 @@ export default {
           '14px',
           {
             lineHeight: '21px',
-            fontWeight: '900', // Extra Bold
+            fontWeight: '700', // Bold
             letterSpacing: '0',
           },
         ],
@@ -109,7 +109,7 @@ export default {
           {
             lineHeight: '21px',
             fontWeight: '500', // Medium
-            letterSpacing: '-0.04px',
+            letterSpacing: '0',
           },
         ],
         'stitle-b': [
