@@ -5,14 +5,15 @@ type ChipProps = {
 };
 
 function Chip({ onClick, label, isSelected }: ChipProps) {
-  const borderColor = isSelected ? 'primary-200' : 'gray-700';
-  const textColor = isSelected ? 'primary-200' : 'gray-700';
-
   return (
     <button
       type="button"
       onClick={onClick}
-      className={`bg-whtie border rounded-[3px] py-[5px] px-[25px] text-small-b border-${borderColor} text-${textColor}`}
+      className={`bg-white border rounded-[3px] py-[5px] px-[25px] text-small-b ${
+        isSelected
+          ? 'border-primary-200 text-primary-200'
+          : 'border-gray-700 text-gray-700'
+      }`}
     >
       {label}
     </button>
