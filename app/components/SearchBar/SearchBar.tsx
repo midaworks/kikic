@@ -52,7 +52,11 @@ function SearchBar({
         placeholder={placeholder || ''}
       />
       <div className="pl-[26px]  flex items-center justify-center">
-        <ImageButton src={SearchIcon} onClick={onSubmit} label="검색버튼" />
+        <ImageButton
+          src={SearchIcon}
+          onClick={onSubmit}
+          label="검색돋보기아이콘"
+        />
       </div>
     </div>
   );
