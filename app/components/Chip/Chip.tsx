@@ -12,7 +12,7 @@ function Chip({ onClick, label, isActive }: ChipProps) {
     <button
       type="button"
       onClick={onClick}
-      className={`bg-white border rounded-[3px] py-[5px] px-[25px] text-small-b border-${borderColor} text-${textColor}`}
+      className={`border rounded-[3px] py-[5px] px-[25px] text-small-b border-${borderColor} text-${textColor}`}
     >
       {label}
     </button>
