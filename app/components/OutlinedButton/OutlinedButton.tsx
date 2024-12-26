@@ -3,6 +3,7 @@ type OutlinedButtonProps = {
   color: string;
   fontWeight: 'medium' | 'bold';
   onClick: React.MouseEventHandler<HTMLButtonElement>;
+  disabled?: boolean;
 };
 
 function OutlinedButton({
@@ -10,6 +11,7 @@ function OutlinedButton({
   label,
   color,
   fontWeight,
+  disabled,
 }: OutlinedButtonProps) {
   const fontWeightClass = fontWeight === 'bold' ? 'small-b' : 'small-m';
 
@@ -22,6 +24,7 @@ function OutlinedButton({
         borderColor: color,
         color,
       }}
+      disabled={disabled}
     >
       {label}
     </button>
