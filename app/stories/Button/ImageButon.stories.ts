@@ -4,7 +4,7 @@ import { fn } from '@storybook/test';
 import ImageButton from '~/components/ImageButton/ImageButton';
 
 const meta = {
-  title: 'Components/ImageButton',
+  title: 'Button/ImageButton',
   component: ImageButton,
   parameters: {
     layout: 'centered',
