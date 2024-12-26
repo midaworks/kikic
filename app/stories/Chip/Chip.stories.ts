@@ -10,8 +10,9 @@ const meta = {
     layout: 'centered',
   },
   argTypes: {
+    children: { control: 'text' },
     onClick: { action: 'clicked' },
-    isSelected: { control: 'boolean' },
+    isSelected: { control: 'boolean', defaultValue: true },
   },
   tags: ['autodocs'],
 } satisfies Meta<typeof Chip>;
@@ -19,7 +20,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Active: Story = {
+export const Selected: Story = {
   args: {
     onClick: fn(),
     children: '구글',
@@ -27,7 +28,7 @@ export const Active: Story = {
   },
 };
 
-export const Inactive: Story = {
+export const Unselected: Story = {
   args: {
     onClick: fn(),
     children: '네이버',

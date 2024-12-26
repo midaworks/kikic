@@ -9,6 +9,11 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
+  argTypes: {
+    onClick: { action: 'clicked' },
+    src: { control: 'text' },
+    label: { control: 'text' },
+  },
   tags: ['autodocs'],
 } satisfies Meta<typeof ImageButton>;
 

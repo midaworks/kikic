@@ -9,13 +9,20 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
+  argTypes: {
+    children: { control: 'text' },
+    onClick: { action: 'clicked' },
+    color: { control: 'color' },
+    fontWeight: { control: 'select', options: ['medium', 'bold'] },
+    disabled: { control: 'boolean', defaultValue: false },
+  },
   tags: ['autodocs'],
 } satisfies Meta<typeof OutlinedButton>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Medium: Story = {
+export const MediumFont: Story = {
   args: {
     onClick: fn(),
     children: '정보수정',
@@ -24,7 +31,7 @@ export const Medium: Story = {
   },
 };
 
-export const Bold: Story = {
+export const BoldFont: Story = {
   args: {
     onClick: fn(),
     children: '구글',
