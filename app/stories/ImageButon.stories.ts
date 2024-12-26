@@ -18,6 +18,8 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     onClick: fn(),
-    image: 'https://picsum.photos/100/100',
+    src: 'https://picsum.photos/100/100',
+    alt: 'imageButton',
+    title: '이미지 버튼',
   },
 };

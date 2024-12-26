@@ -1,16 +1,19 @@
 type ImageButtonProps = {
-  image: string;
+  src: string;
+  alt: string;
+  title: string;
   onClick: () => void;
 };
 
-function ImageButton({ onClick, image }: ImageButtonProps) {
+function ImageButton({ onClick, src, alt, title }: ImageButtonProps) {
   return (
     <button
       onClick={onClick}
       type="button"
-      className="flex items-center justify-center overflow-hidden active:opacity-90"
+      className="flex items-center justify-center overflow-hidden"
+      aria-label={title}
     >
-      <img src={image} alt="imageButton" />
+      <img src={src} alt={alt} />
     </button>
   );
 }
