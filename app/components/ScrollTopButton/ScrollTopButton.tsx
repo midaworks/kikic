@@ -8,7 +8,7 @@ function ScrollTopButton({ onClick, label }: ScrollTopButtonProps) {
     <button
       onClick={onClick}
       type="button"
-      className="flex h-11 w-11 items-center justify-center rounded-full bg-primary-100 text-white text-content-b font-sans"
+      className="flex h-11 w-11 items-center justify-center rounded-full bg-primary-200 text-white font-noto text-content-b "
     >
       {label}
     </button>
