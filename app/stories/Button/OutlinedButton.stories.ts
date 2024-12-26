@@ -18,7 +18,7 @@ type Story = StoryObj<typeof meta>;
 export const Medium: Story = {
   args: {
     onClick: fn(),
-    label: '정보수정',
+    children: '정보수정',
     color: '#CCCCCC',
     fontWeight: 'medium',
   },
@@ -27,7 +27,7 @@ export const Medium: Story = {
 export const Bold: Story = {
   args: {
     onClick: fn(),
-    label: '구글',
+    children: '구글',
     color: '#f34d33',
     fontWeight: 'bold',
   },

@@ -1,5 +1,5 @@
 type OutlinedButtonProps = {
-  label: string;
+  children: React.ReactNode;
   color: string;
   fontWeight: 'medium' | 'bold';
   onClick: React.MouseEventHandler<HTMLButtonElement>;
@@ -8,7 +8,7 @@ type OutlinedButtonProps = {
 
 function OutlinedButton({
   onClick,
-  label,
+  children,
   color,
   fontWeight,
   disabled,
@@ -26,7 +26,7 @@ function OutlinedButton({
       }}
       disabled={disabled}
     >
-      {label}
+      {children}
     </button>
   );
 }
