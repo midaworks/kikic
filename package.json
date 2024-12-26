@@ -19,6 +19,7 @@
     "@remix-run/node": "^2.15.0",
     "@remix-run/react": "^2.15.0",
     "@remix-run/serve": "^2.15.0",
+    "@storybook/addon-a11y": "^8.4.7",
     "@storybook/test": "^8.4.6",
     "cross-env": "^7.0.3",
     "express": "^4.21.2",
