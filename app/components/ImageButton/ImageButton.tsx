@@ -1,7 +1,7 @@
 type ImageButtonProps = {
   src: string;
   label: string;
-  onClick: () => void;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
 };
 
 function ImageButton({ onClick, src, label }: ImageButtonProps) {
