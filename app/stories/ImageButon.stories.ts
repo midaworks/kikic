@@ -19,7 +19,6 @@ export const Primary: Story = {
   args: {
     onClick: fn(),
     src: 'https://picsum.photos/100/100',
-    alt: 'imageButton',
-    title: '이미지 버튼',
+    label: '이미지 버튼',
   },
 };
