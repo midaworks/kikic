@@ -8,9 +8,9 @@ function ImageButton({ onClick, image }: ImageButtonProps) {
     <button
       onClick={onClick}
       type="button"
-      className="flex h-11 w-11 items-center justify-center rounded-full overflow-hidden"
+      className="flex items-center justify-center overflow-hidden active:opacity-90"
     >
-      <img src={image} alt="imageButton" className="h-11 w-11 object-cover" />
+      <img src={image} alt="imageButton" />
     </button>
   );
 }

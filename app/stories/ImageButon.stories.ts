@@ -16,5 +16,8 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  args: { onClick: fn(), image: 'https://picsum.photos/200/300' },
+  args: {
+    onClick: fn(),
+    image: 'https://picsum.photos/100/100',
+  },
 };
