@@ -9,6 +9,10 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
+  argTypes: {
+    onClick: { action: 'clicked' },
+    isSelected: { control: 'boolean' },
+  },
   tags: ['autodocs'],
 } satisfies Meta<typeof Chip>;
 
@@ -19,7 +23,7 @@ export const Active: Story = {
   args: {
     onClick: fn(),
     label: '구글',
-    isActive: true,
+    isSelected: true,
   },
 };
 
@@ -27,6 +31,6 @@ export const Inactive: Story = {
   args: {
     onClick: fn(),
     label: '네이버',
-    isActive: false,
+    isSelected: false,
   },
 };

@@ -1,18 +1,18 @@
 type ChipProps = {
   label: string;
-  isActive: boolean;
+  isSelected: boolean;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 };
 
-function Chip({ onClick, label, isActive }: ChipProps) {
-  const borderColor = isActive ? 'primary-200' : 'gray-700';
-  const textColor = isActive ? 'primary-200' : 'gray-700';
+function Chip({ onClick, label, isSelected }: ChipProps) {
+  const borderColor = isSelected ? 'primary-200' : 'gray-700';
+  const textColor = isSelected ? 'primary-200' : 'gray-700';
 
   return (
     <button
       type="button"
       onClick={onClick}
-      className={`border rounded-[3px] py-[5px] px-[25px] text-small-b border-${borderColor} text-${textColor}`}
+      className={`bg-whtie border rounded-[3px] py-[5px] px-[25px] text-small-b border-${borderColor} text-${textColor}`}
     >
       {label}
     </button>
