@@ -10,7 +10,7 @@ function ImageButton({ onClick, src, label }: ImageButtonProps) {
       onClick={onClick}
       type="button"
       className="flex items-center justify-center overflow-hidden"
-      aria-label={label}
+      title={label}
     >
       <img src={src} alt={label} />
     </button>
