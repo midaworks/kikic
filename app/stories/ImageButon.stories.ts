@@ -1,20 +1,24 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
 
-import ScrollTopButton from '~/components/ScrollTopButton/ScrollTopButton';
+import ImageButton from '~/components/ImageButton/ImageButton';
 
 const meta = {
-  title: 'Components/ScrollTopButton',
-  component: ScrollTopButton,
+  title: 'Components/ImageButton',
+  component: ImageButton,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof ScrollTopButton>;
+} satisfies Meta<typeof ImageButton>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  args: { onClick: fn(), label: 'TOP' },
+  args: {
+    onClick: fn(),
+    src: 'https://picsum.photos/100/100',
+    label: '이미지 버튼',
+  },
 };
