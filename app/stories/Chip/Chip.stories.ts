@@ -26,16 +26,16 @@ type Story = StoryObj<typeof meta>;
 
 export const Selected: Story = {
   args: {
-    onClick: fn(),
     children: '구글',
     isSelected: true,
+    onClick: fn(),
   },
 };
 
 export const Unselected: Story = {
   args: {
-    onClick: fn(),
     children: '네이버',
     isSelected: false,
+    onClick: fn(),
   },
 };

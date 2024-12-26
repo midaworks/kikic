@@ -32,18 +32,18 @@ type Story = StoryObj<typeof meta>;
 
 export const MediumFont: Story = {
   args: {
-    onClick: fn(),
     children: '정보수정',
     color: '#CCCCCC',
     fontWeight: 'medium',
+    onClick: fn(),
   },
 };
 
 export const BoldFont: Story = {
   args: {
-    onClick: fn(),
     children: '구글',
     color: '#f34d33',
     fontWeight: 'bold',
+    onClick: fn(),
   },
 };
