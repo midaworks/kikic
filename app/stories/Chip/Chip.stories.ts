@@ -10,8 +10,13 @@ const meta = {
     layout: 'centered',
   },
   argTypes: {
-    onClick: { action: 'clicked' },
-    isSelected: { control: 'boolean' },
+    children: { control: 'text', description: '칩 내용' },
+    onClick: { action: 'clicked', description: '칩 클릭 이벤트' },
+    isSelected: {
+      control: 'boolean',
+      defaultValue: true,
+      description: '선택 여부',
+    },
   },
   tags: ['autodocs'],
 } satisfies Meta<typeof Chip>;
@@ -19,18 +24,18 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Active: Story = {
+export const Selected: Story = {
   args: {
-    onClick: fn(),
     children: '구글',
     isSelected: true,
+    onClick: fn(),
   },
 };
 
-export const Inactive: Story = {
+export const Unselected: Story = {
   args: {
-    onClick: fn(),
     children: '네이버',
     isSelected: false,
+    onClick: fn(),
   },
 };

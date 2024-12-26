@@ -9,26 +9,41 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
+  argTypes: {
+    children: { control: 'text', description: '버튼 내용' },
+    onClick: { action: 'clicked', description: '버튼 클릭 이벤트' },
+    color: { control: 'color', description: '버튼 테두리 및 폰트 색상' },
+    fontWeight: {
+      control: 'select',
+      options: ['medium', 'bold'],
+      description: '버튼 폰트 굵기',
+    },
+    disabled: {
+      control: 'boolean',
+      defaultValue: false,
+      description: '버튼 비활성화 여부',
+    },
+  },
   tags: ['autodocs'],
 } satisfies Meta<typeof OutlinedButton>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Medium: Story = {
+export const MediumFont: Story = {
   args: {
-    onClick: fn(),
     children: '정보수정',
     color: '#CCCCCC',
     fontWeight: 'medium',
+    onClick: fn(),
   },
 };
 
-export const Bold: Story = {
+export const BoldFont: Story = {
   args: {
-    onClick: fn(),
     children: '구글',
     color: '#f34d33',
     fontWeight: 'bold',
+    onClick: fn(),
   },
 };

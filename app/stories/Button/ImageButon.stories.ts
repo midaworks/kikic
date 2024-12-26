@@ -9,6 +9,14 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
+  argTypes: {
+    onClick: { action: 'clicked', description: '이미지 클릭 이벤트' },
+    src: { control: 'text', description: '이미지 주소' },
+    label: {
+      control: 'text',
+      description: 'img alt 속성 및 button title 속성',
+    },
+  },
   tags: ['autodocs'],
 } satisfies Meta<typeof ImageButton>;
 
@@ -17,8 +25,8 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    onClick: fn(),
     src: 'https://picsum.photos/100/100',
     label: '이미지 버튼',
+    onClick: fn(),
   },
 };
