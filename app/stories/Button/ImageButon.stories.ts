@@ -10,9 +10,12 @@ const meta = {
     layout: 'centered',
   },
   argTypes: {
-    onClick: { action: 'clicked' },
-    src: { control: 'text' },
-    label: { control: 'text' },
+    onClick: { action: 'clicked', description: '이미지 클릭 이벤트' },
+    src: { control: 'text', description: '이미지 주소' },
+    label: {
+      control: 'text',
+      description: 'img alt 속성 및 button title 속성',
+    },
   },
   tags: ['autodocs'],
 } satisfies Meta<typeof ImageButton>;

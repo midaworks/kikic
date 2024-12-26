@@ -10,9 +10,13 @@ const meta = {
     layout: 'centered',
   },
   argTypes: {
-    children: { control: 'text' },
-    onClick: { action: 'clicked' },
-    isSelected: { control: 'boolean', defaultValue: true },
+    children: { control: 'text', description: '칩 내용' },
+    onClick: { action: 'clicked', description: '칩 클릭 이벤트' },
+    isSelected: {
+      control: 'boolean',
+      defaultValue: true,
+      description: '선택 여부',
+    },
   },
   tags: ['autodocs'],
 } satisfies Meta<typeof Chip>;
