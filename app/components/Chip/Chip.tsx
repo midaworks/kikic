@@ -1,10 +1,10 @@
 type ChipProps = {
-  label: string;
+  children: React.ReactNode;
   isSelected: boolean;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 };
 
-function Chip({ onClick, label, isSelected }: ChipProps) {
+function Chip({ onClick, children, isSelected }: ChipProps) {
   return (
     <button
       type="button"
@@ -15,7 +15,7 @@ function Chip({ onClick, label, isSelected }: ChipProps) {
           : 'border-gray-700 text-gray-700'
       }`}
     >
-      {label}
+      {children}
     </button>
   );
 }

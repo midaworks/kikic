@@ -22,7 +22,7 @@ type Story = StoryObj<typeof meta>;
 export const Active: Story = {
   args: {
     onClick: fn(),
-    label: '구글',
+    children: '구글',
     isSelected: true,
   },
 };
@@ -30,7 +30,7 @@ export const Active: Story = {
 export const Inactive: Story = {
   args: {
     onClick: fn(),
-    label: '네이버',
+    children: '네이버',
     isSelected: false,
   },
 };
